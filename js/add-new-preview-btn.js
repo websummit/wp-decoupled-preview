@@ -11,7 +11,7 @@ const addNewPreviewButton = () => {
 		const previewBlock    	  = document.querySelector( ".block-editor-post-preview__dropdown" );
 		const decoupledPreviewBtn = document.getElementById( 'wp-admin-bar-decoupled-preview' );
 		// Remove the old Preview button.
-		previewBlock.removeChild( previewBlock.querySelector( 'button' ) );
+		// previewBlock.removeChild( previewBlock.querySelector( 'button' ) );
 		// Add Decoupled Preview Button into the same Preview continer.
 		previewBlock.appendChild( decoupledPreviewBtn );
 		// Hide submenu items by default.
