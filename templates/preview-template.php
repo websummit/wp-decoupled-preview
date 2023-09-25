@@ -25,11 +25,11 @@ if ( ! wp_verify_nonce( $nonce, 'post_preview_' . $preview_id ) ) {
 $preview_post = get_post( $preview_id );
 $revision = wp_get_post_autosave( $preview_id, get_current_user_id() );
 $preview_post_type = get_post_type( $preview_post );
-$id = $preview_id;
+$id = $preview_id ? $preview_id : ($revision->ID ? $revision->ID : 'error'); 
 
 $preview_helper = new Decoupled_Preview_Settings();
 $preview_site = $preview_helper->get_preview_site( $preview_site_id );
-$encoded_token = urlencode($token)
+$encoded_token = urlencode($token);
 
 $redirect = "{$preview_site['url']}?secret={$preview_site['secret_string']}&uri={$preview_post->post_name}&id={$id}&content_type={$preview_post_type}&token={$encoded_token}";
 ?>
