@@ -8,7 +8,7 @@
 
 const addNewPreviewButton = () => {
 	try {
-		const previewBlock    	  = document.querySelector( ".block-editor-post-preview__dropdown" );
+		const previewBlock    	  = document.querySelector( ".editor-preview-dropdown" );
 		const decoupledPreviewBtn = document.getElementById( 'wp-admin-bar-decoupled-preview' );
 		// Remove the old Preview button.
 		// previewBlock.removeChild( previewBlock.querySelector( 'button' ) );
