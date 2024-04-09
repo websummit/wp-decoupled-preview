@@ -3,7 +3,7 @@
  * Plugin Name:     Pantheon Decoupled Preview
  * Plugin URI:      https://github.com/pantheon-systems/wp-decoupled-preview
  * Description:     Preview WordPress content on Front-end sites including Next.js
- * Version:         10.0.2
+ * Version:         10.0.3
  * Author:          Pantheon
  * Author URI:      https://pantheon.io/
  * Text Domain:     wp-decoupled-preview
@@ -219,7 +219,7 @@ function enqueue_scripts() {
 	$enable_by_post_type = $preview_helper->get_enabled_site_by_post_type( get_post_type() );
 	if ( $sites && ! empty( $enable_by_post_type ) ) {
 		wp_enqueue_style( 'add-icon', plugins_url( '/css/add-icon.css', __FILE__ ), [], 1.0 );
-		wp_enqueue_script( 'add-new-preview-btn', plugins_url( '/js/add-new-preview-btn.js', __FILE__ ), [], 1.0, true );
+		wp_enqueue_script( 'add-new-preview-btn', plugins_url( '/js/add-new-preview-btn.js?ver=10.0.3', __FILE__ ), [], 1.0, true );
 	}
 }
 
